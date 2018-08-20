@@ -1,0 +1,15 @@
+<h5>Router Setup</h5>
+<p>The <code>hc-breadcrumb</code> component makes use of the angular <code>Router</code> with the scope of the routing module in which it is placed. A custom data element named <code>breadcrumb</code> must be added to its Routes in order for the breadcrumb component to function properly. Below in an example of a properly configured Route:</p>
+<pre><code class="language-json">{
+    path: &quot;breadcrumbs&quot;,
+    component: BreadcrumbsDemoComponent,
+    data: {breadcrumb: &quot;Home Page&quot;},
+    children: [
+        {
+            path: &quot;breadcrumb1&quot;,
+            component: Breadcrumb1DemoComponent,
+            data: {breadcrumb: &quot;Second Page&quot;}
+        }
+    ]
+}
+</code></pre>
